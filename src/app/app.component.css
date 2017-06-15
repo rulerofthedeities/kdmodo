@@ -14,3 +14,12 @@ video {
   height: auto;
   width: auto;
 }
+
+@media screen and (max-device-width: 800px) {
+  html {
+    background: url(/assets/img/background.jpg) #000 no-repeat center center fixed;
+  }
+  video {
+    display: none;
+  }
+}
