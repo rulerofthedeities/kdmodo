@@ -3,11 +3,22 @@ import {ActivatedRoute} from '@angular/router';
 import 'rxjs/add/operator/takeWhile';
 
 @Component({
-  template: `<h1>PAGE {{tab}}</h1>
+  template: `
+    <section>
+      <div class="panel">
+        PAGE {{tab}}
+      </div>
+    </section>
   `,
   styles: [`
-    h1 {
+    .panel {
+      background-color: rgba(255, 255, 255, 0.1);
+      margin-top: 20px;
+      border: 2px solid white;
+      border-radius: 6px;
       color: white;
+      font-size: 26px;
+      padding: 16px;
     }
   `]
 })

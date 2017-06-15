@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 
 import { routes } from './app.routes';
 import { AppComponent } from './components/app.component';
+import { MenuComponent } from './components/menu.component';
 import { PageComponent } from './components/page.component';
 import { PageNotFoundComponent } from './components/page-not-found.component';
 
@@ -18,6 +19,7 @@ import { PageNotFoundComponent } from './components/page-not-found.component';
   ],
   declarations: [
     AppComponent,
+    MenuComponent,
     PageComponent,
     PageNotFoundComponent
   ],
