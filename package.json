@@ -1,14 +1,22 @@
 {
   "name": "kd-modo",
+  "description": "KD-Modo website",
   "version": "0.0.0",
-  "license": "MIT",
+  "author": "Kristiaan Van Ermengem",
   "scripts": {
+    "preinstall": "npm install pm2 -g",
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "pm2 start kd-modo.js --watch",
+    "build": "ng build -w",
+    "build:prod": "ng build -prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "ng build -prod"
+  },
+  "engines": {
+    "node": "6.10.0",
+    "npm": "4.3.0"
   },
   "private": true,
   "dependencies": {
@@ -20,7 +28,13 @@
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
+    "body-parser": "^1.17.2",
+    "bootstrap": "^3.3.7",
+    "compression": "^1.6.2",
     "core-js": "^2.4.1",
+    "express": "^4.15.3",
+    "mongoose": "^4.10.6",
+    "path": "^0.12.7",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
   },
