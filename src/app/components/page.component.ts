@@ -13,7 +13,8 @@ import 'rxjs/add/operator/takeWhile';
   styles: [`
     .panel {
       background-color: rgba(255, 255, 255, 0.1);
-      margin-top: 20px;
+      min-height: 400px;
+      margin-top: 24px;
       border: 2px solid white;
       border-radius: 6px;
       color: white;
