@@ -28,7 +28,7 @@ import {Component} from '@angular/core';
   `,
   styles: [`
     .desktop {
-      margin-top: 34px;
+      margin-top: 54px;
     }
     .desktop .menu .btn{
       font-size: 32px;
