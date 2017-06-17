@@ -1,0 +1,64 @@
+<nav class="desktop">
+  <div class="menu clearfix">
+    <a routerLink="" routerLinkActive="selected" 
+      [routerLinkActiveOptions]="{exact: true}"
+      class="btn btn-default"
+      on-mouseover='onHover(0)'
+      on-mouseleave='onMouseOut()'>
+      <img src="/assets/img/logo.png" class="logo">
+      <span class="light"
+        [class.yellow]="yellowLight===0">
+      </span>
+    </a>
+    <a routerLink="/hosting" 
+      routerLinkActive="selected"
+      class="btn btn-default"
+      on-mouseover='onHover(1)'
+      on-mouseleave='onMouseOut()'>
+      <span class="glyphicon glyphicon-hdd"></span> Hosting
+      <span class="light red"
+        [class.yellow]="yellowLight===1">
+      </span>
+    </a>
+    <a routerLink="/websites"
+      routerLinkActive="selected"
+      class="btn btn-default"
+      on-mouseover='onHover(2)'
+      on-mouseleave='onMouseOut()'>
+      <span class="glyphicon glyphicon-picture"></span> Websites
+      <span class="light red"
+        [class.yellow]="yellowLight===2">
+      </span>
+    </a>
+    <a routerLink="/webapps"
+      routerLinkActive="selected"
+      class="btn btn-default"
+      on-mouseover='onHover(3)'
+      on-mouseleave='onMouseOut()'>
+      <span class="glyphicon glyphicon-stats"></span> Webapps
+      <span class="light red"
+        [class.yellow]="yellowLight===3">
+      </span>
+    </a>
+    <a routerLink="/portfolio"
+      routerLinkActive="selected"
+      class="btn btn-default"
+      on-mouseover='onHover(4)'
+      on-mouseleave='onMouseOut()'>
+      <span class="glyphicon glyphicon-th-list"></span> Portfolio
+      <span class="light red"
+        [class.yellow]="yellowLight===4">
+      </span>
+    </a>
+    <a routerLink="/contact"
+      routerLinkActive="selected"
+      class="btn btn-default"
+      on-mouseover='onHover(5)'
+      on-mouseleave='onMouseOut()'>
+      <span class="glyphicon glyphicon-pencil"></span> Contact
+      <span class="light red"
+        [class.yellow]="yellowLight===5">
+      </span>
+    </a>
+  </div>
+</nav>
