@@ -6,10 +6,10 @@ import {Component} from '@angular/core';
   <nav class="desktop">
     <div class="menu clearfix">
       <a routerLink="" routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}" class="btn btn-default">
-        <span class="glyphicon glyphicon-home"></span>
+        <img src="/assets/img/logo.png" class="logo"><span class="light"></span>
       </a>
       <a routerLink="/hosting" routerLinkActive="selected" class="btn btn-default">
-        <span class="glyphicon glyphicon-hdd"></span> Hosting
+        <span class="glyphicon glyphicon-hdd"></span> Hosting<span class="light"></span>
       </a>
       <a routerLink="/websites" routerLinkActive="selected" class="btn btn-default">
         <span class="glyphicon glyphicon-picture"></span> Websites
@@ -52,7 +52,21 @@ import {Component} from '@angular/core';
     .selected:hover {
       border-bottom: 2px solid #fff;
     }
-
+    .logo {
+      height: 36px;
+    }
+    .light {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background-color: rgb(226,0,0);
+      box-shadow: inset 0px 1px 0px 0px rgba(250,250,250,0.5),
+            0px 0px 3px 2px rgba(226,0,0,0.5);
+      border-radius: 4px;
+      top: -24px;
+      right: -6px;
+      position: relative;
+    }
   `]
 })
 

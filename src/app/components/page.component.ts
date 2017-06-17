@@ -75,10 +75,12 @@ export class PageComponent implements OnInit, OnDestroy {
   }
 
   private setImage(tab: string) {
-    if (tab === 'portfolio' || tab === 'contact') {
-      this.img = null;
-    } else {
-      this.img = '/assets/img/' + tab.toLowerCase() + '.jpg';
+    switch (tab) {
+      case 'portfolio':
+      case 'contact':
+        this.img = null;
+        break;
+      default: this.img = '/assets/img/' + tab.toLowerCase() + '.jpg';
     }
   }
 
