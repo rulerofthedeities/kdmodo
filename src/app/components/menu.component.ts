@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'kd-menu',
@@ -7,6 +7,7 @@ import {Component} from '@angular/core';
 })
 
 export class MenuComponent {
+  @Input() version: string;
   yellowLight: number = null;
 
   onHover(i: number) {
@@ -14,7 +15,6 @@ export class MenuComponent {
   }
 
   onMouseOut() {
-    console.log('mouse out');
     this.yellowLight = null;
   }
 }

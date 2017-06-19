@@ -1,9 +1,9 @@
 <video playsinline autoplay muted loop>
-    <source src="/assets/video/background.mp4" type="video/mp4">
+    <source src="/assets/video/background-{{version}}.mp4" type="video/mp4">
 </video>
 
 <div class="container">
-  <kd-menu></kd-menu>
+  <kd-menu [version]="version"></kd-menu>
   <router-outlet></router-outlet>
   <kd-footer></kd-footer>
 </div>

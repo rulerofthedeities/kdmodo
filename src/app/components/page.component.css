@@ -1,0 +1,44 @@
+.panel {
+  background-color: rgba(0, 0, 0, 0.3);
+  min-height: 404px;
+  margin-top: 44px;
+  border: 2px solid white;
+  border-radius: 6px;
+  color: white;
+  font-size: 26px;
+}
+img {
+  border-right: 1px solid grey;
+}
+.txt {
+  margin-left: 316px;
+  padding: 8px;
+}
+.txt.wide {
+  margin-left: 16px;
+}
+h1 {
+  font-size: 34px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid grey;
+  color: #ccc;
+}
+.content {
+  padding-left: 12px;
+  color: #eee;
+}
+
+/* pool version */
+
+.pool .panel{
+  background-color: rgba(1, 77, 102, 0.7);
+  border-color: #fff;
+  color: white;
+}
+.pool h1{
+  color: white;
+}
+.pool .content {
+  padding-left: 12px;
+  color: #eee;
+}

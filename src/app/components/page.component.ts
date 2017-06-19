@@ -1,10 +1,11 @@
 import {Component, OnInit, OnDestroy} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
+import {version} from '../app.config';
 import 'rxjs/add/operator/takeWhile';
 
 @Component({
   template: `
-    <section>
+    <section class="{{version}}">
       <div class="panel">
         <img src="{{img}}" class="pull-left" *ngIf="img">
         <div class="txt" [class.wide]="!img">
@@ -18,37 +19,7 @@ import 'rxjs/add/operator/takeWhile';
       </div>
     </section>
   `,
-  styles: [`
-    .panel {
-      background-color: rgba(255, 255, 255, 0.1);
-      min-height: 404px;
-      margin-top: 44px;
-      border: 2px solid white;
-      border-radius: 6px;
-      color: white;
-      font-size: 26px;
-    }
-    img {
-      border-right: 1px solid grey;
-    }
-    .txt {
-      margin-left: 316px;
-      padding: 8px;
-    }
-    .txt.wide {
-      margin-left: 16px;
-    }
-    h1 {
-      font-size: 34px;
-      margin-bottom: 30px;
-      border-bottom: 1px solid grey;
-      color: #ccc;
-    }
-    .content {
-      padding-left: 12px;
-      color: #eee;
-    }
-  `]
+  styleUrls: ['page.component.css']
 })
 
 export class PageComponent implements OnInit, OnDestroy {
@@ -56,12 +27,14 @@ export class PageComponent implements OnInit, OnDestroy {
   tab: string;
   img: string;
   text: string[];
+  version: string;
 
   constructor(
     private route: ActivatedRoute
   ) {}
 
   ngOnInit() {
+    this.version = version;
     this.route
     .data
     .takeWhile(() => this.componentActive)
