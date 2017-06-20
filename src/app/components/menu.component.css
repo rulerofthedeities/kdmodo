@@ -65,12 +65,12 @@
 
 /* Pool design */
 
-.pool .btn {
+:host-context(.pool) .btn {
   background-color: rgba(1, 77, 102, 0.9);
   color: #ddd;
 }
 
-.selected {
+:host-context(.pool) .selected .btn{
   background-color: rgba(255, 255, 255, 0.1);
   border-bottom: 2px solid #fff;
   color: #eee;

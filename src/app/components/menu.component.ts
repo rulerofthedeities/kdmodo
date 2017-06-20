@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'kd-menu',
@@ -7,7 +7,6 @@ import {Component, Input} from '@angular/core';
 })
 
 export class MenuComponent {
-  @Input() version: string;
   yellowLight: number = null;
 
   onHover(i: number) {

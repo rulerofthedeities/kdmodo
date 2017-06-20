@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {version} from '../app.config';
+import {theme} from '../app.config';
 
 @Component({
   selector: 'kd-app-root',
@@ -7,9 +7,9 @@ import {version} from '../app.config';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  version: string;
+  theme: string;
 
   ngOnInit() {
-    this.version = version;
+    this.theme = theme;
   }
 }

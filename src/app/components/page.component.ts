@@ -1,11 +1,10 @@
 import {Component, OnInit, OnDestroy} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {version} from '../app.config';
 import 'rxjs/add/operator/takeWhile';
 
 @Component({
   template: `
-    <section class="{{version}}">
+    <section>
       <div class="panel">
         <img src="{{img}}" class="pull-left" *ngIf="img">
         <div class="txt" [class.wide]="!img">
@@ -27,14 +26,12 @@ export class PageComponent implements OnInit, OnDestroy {
   tab: string;
   img: string;
   text: string[];
-  version: string;
 
   constructor(
     private route: ActivatedRoute
   ) {}
 
   ngOnInit() {
-    this.version = version;
     this.route
     .data
     .takeWhile(() => this.componentActive)

@@ -30,15 +30,15 @@ h1 {
 
 /* pool version */
 
-.pool .panel{
+:host-context(.pool) .panel{
   background-color: rgba(1, 77, 102, 0.7);
   border-color: #fff;
   color: white;
 }
-.pool h1{
+:host-context(.pool)  h1{
   color: white;
 }
-.pool .content {
+:host-context(.pool)  .content {
   padding-left: 12px;
   color: #eee;
 }

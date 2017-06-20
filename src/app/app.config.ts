@@ -1,1 +1,1 @@
-export const version = 'moon';
+export const theme = 'pool';
