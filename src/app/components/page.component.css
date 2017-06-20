@@ -14,6 +14,13 @@ img {
   margin-left: 316px;
   padding: 8px;
 }
+.a404 .txt {
+  margin-left: 416px;
+  padding: 8px;
+}
+.txt a {
+  color: white;
+}
 .txt.wide {
   margin-left: 16px;
 }
