@@ -14,3 +14,10 @@ video {
   height: auto;
   width: auto;
 }
+.theme {
+  cursor: pointer;
+  color: #aaa;
+}
+.selected {
+  color: white;
+}

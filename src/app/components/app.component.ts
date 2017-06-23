@@ -7,9 +7,21 @@ import {theme} from '../app.config';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  themes: string[];
   theme: string;
+  video: string;
 
   ngOnInit() {
-    this.theme = theme;
+    this.themes = ['Moon', 'Pool'];
+    this.changeTheme(theme);
+  }
+
+  onChangeTheme(newTheme: string) {
+    this.changeTheme(newTheme);
+  }
+
+  private changeTheme(newTheme: string) {
+    this.theme = newTheme.toLowerCase();
+    this.video = '/assets/video/background-' + this.theme + '.mp4';
   }
 }

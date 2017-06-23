@@ -1,9 +1,15 @@
-<video playsinline autoplay muted loop>
-    <source src="/assets/video/background-{{theme}}.mp4" type="video/mp4">
+<video playsinline autoplay muted loop [src]="video">
 </video>
 
 <div class="container {{theme}}">
+  
   <kd-menu></kd-menu>
   <router-outlet></router-outlet>
   <kd-footer></kd-footer>
+  <span *ngFor="let atheme of themes"
+    class="theme"
+    (click)="onChangeTheme(atheme)"
+    [class.selected]="theme===atheme.toLowerCase()">
+    {{atheme}}
+  </span>
 </div>
