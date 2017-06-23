@@ -39,10 +39,12 @@ h1 {
   margin: 12px 10px;
   border: 2px solid white;
   width: 46%;
+  min-width: 370px;
   border-radius: 4px;
-  background-color: #e6fc48;
+  background-color: #b1d953;
   color: black;
-  background: linear-gradient(to right, #b1d953 , #93c559);
+  background: linear-gradient(to bottom, #b1d953 , #93c559);
+  overflow: hidden;
 }
 .portfolio-item:hover {
   border-color: #b1d953;
@@ -64,18 +66,24 @@ h1 {
   cursor: pointer;
 }
 
-
-/* pool version */
+/* pool theme */
 
 :host-context(.pool) .panel{
   background-color: rgba(1, 77, 102, 0.7);
   border-color: #fff;
   color: white;
 }
-:host-context(.pool)  h1{
+:host-context(.pool) h1{
   color: white;
 }
-:host-context(.pool)  .content {
+:host-context(.pool) .content {
   padding-left: 12px;
   color: #eee;
 }
+
+/* trees theme */
+
+:host-context(.trees) .panel{
+  background-color: rgba(0, 0, 0, 0.8);
+}
+

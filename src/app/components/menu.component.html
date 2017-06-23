@@ -62,3 +62,50 @@
     </a>
   </div>
 </nav>
+
+<nav class="mainnav mobile">
+
+  <a routerLink="/"
+    class="pull-left logo">
+    <img src="/assets/img/logo.png">
+  </a>
+  <ul class="nav nav-pills nav-stacked">
+    <li routerLinkActive="active"
+      [routerLinkActiveOptions]="{exact: true}"
+      [class.active] = "isActive('/')">
+      <a routerLink="/" (click)="toggleActive($event)">
+        Home
+      </a>
+    </li>
+    <li routerLinkActive="active"
+      [class.active] = "isActive('/hosting')">
+      <a routerLink="hosting" (click)="toggleActive($event)">
+        <span class="glyphicon glyphicon-hdd"></span> Hosting
+      </a>
+    </li>
+    <li routerLinkActive="active"
+      [class.active] = "isActive('/websites')">
+      <a routerLink="websites" (click)="toggleActive($event)">
+        <span class="glyphicon glyphicon-picture"></span> Websites
+      </a>
+    </li>
+    <li routerLinkActive="active"
+      [class.active] = "isActive('/webapps')">
+      <a routerLink="webapps" (click)="toggleActive($event)">
+        <span class="glyphicon glyphicon-stats"></span> Webapps
+      </a>
+    </li>
+    <li routerLinkActive="active"
+      [class.active] = "isActive('/portfolio')">
+      <a routerLink="portfolio" (click)="toggleActive($event)">
+        <span class="glyphicon glyphicon-list"></span> Portfolio
+      </a>
+    </li>
+    <li routerLinkActive="active"
+      [class.active] = "isActive('/contact')">
+      <a routerLink="contact" (click)="toggleActive($event)">
+        <span class="glyphicon glyphicon-pencil"></span> Contact
+      </a>
+    </li>
+  </ul>
+</nav>

@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
   video: string;
 
   ngOnInit() {
-    this.themes = ['Moon', 'Pool'];
+    this.themes = ['Moon', 'Pool', 'Trees'];
     this.changeTheme(theme);
   }
 
