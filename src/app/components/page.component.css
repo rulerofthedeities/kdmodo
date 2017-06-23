@@ -34,6 +34,36 @@ h1 {
   padding-left: 12px;
   color: #eee;
 }
+.portfolio-item{
+  display: inline-block;
+  margin: 12px 10px;
+  border: 2px solid white;
+  width: 46%;
+  border-radius: 4px;
+  background-color: #e6fc48;
+  color: black;
+  background: linear-gradient(to right, #b1d953 , #93c559);
+}
+.portfolio-item:hover {
+  border-color: #b1d953;
+}
+.portfolio-item img{
+  margin-right: 20px;
+}
+.portfolio-item .title {
+  margin-bottom: 12px;
+  border-bottom: 1px dotted black;
+}
+.portfolio-item .description {
+  font-size: 16px;
+}
+.pdata {
+  padding: 2px;
+}
+.clickable {
+  cursor: pointer;
+}
+
 
 /* pool version */
 

@@ -2,6 +2,13 @@ import {Component, OnInit, OnDestroy} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import 'rxjs/add/operator/takeWhile';
 
+interface Portfolio {
+  alias: string;
+  name: string;
+  description: string;
+  url?: string;
+}
+
 @Component({
   template: `
     <section>
@@ -13,6 +20,20 @@ import 'rxjs/add/operator/takeWhile';
             <p *ngFor="let line of text">
               {{line}}
             </p>
+            <ul *ngIf="tab==='Portfolio'" class="portfolio list-unstyled">
+              <li 
+                *ngFor="let site of portfolio"
+                class="portfolio-item"
+                [class.clickable]="site.url"
+                (click)="onGoToSite(site.url)">
+                <img src="/assets/img/portfolio/{{site.alias}}.jpg" class="pull-left">
+                <div class="pdata">
+                  <div class="title">{{site.name}}</div>
+                  <div class="description">{{site.description}}</div>
+                </div>
+                <div class="clearfix"></div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -26,6 +47,7 @@ export class PageComponent implements OnInit, OnDestroy {
   tab: string;
   img: string;
   text: string[];
+  portfolio: Portfolio[];
 
   constructor(
     private route: ActivatedRoute
@@ -36,6 +58,12 @@ export class PageComponent implements OnInit, OnDestroy {
     .data
     .takeWhile(() => this.componentActive)
     .subscribe(data => this.setTab(data.tab));
+  }
+
+  onGoToSite(url: string) {
+    if (url) {
+      window.location.href = url;
+    }
   }
 
   private setTab(tab: string) {
@@ -72,6 +100,23 @@ export class PageComponent implements OnInit, OnDestroy {
         'Hello, this is the text about webapps',
         'bla bla bla'
         ];
+      break;
+      case 'portfolio': this.portfolio = [
+        {
+          alias: 'aandevesten',
+          name: 'Aan de Vesten',
+          description: 'Dierenartsen website',
+          url: 'http://www.aandevesten.be/'
+        }, {
+          alias: 'stadsverkenner',
+          name: 'Stadsverkenner',
+          description: 'Informatie website',
+          url: 'http://www.stadsverkenner.com/'
+        }, {
+          alias: 'jazyk',
+          name: 'Jazyk',
+          description: 'Taalstudie webapp (u/c)'
+        }];
       break;
     }
     this.text = text;
