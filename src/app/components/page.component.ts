@@ -13,7 +13,7 @@ interface Portfolio {
   template: `
     <section>
       <div class="panel">
-        <img src="{{img}}" class="pull-left" *ngIf="img">
+        <img src="{{img}}" class="page-img pull-left" *ngIf="img">
         <div class="txt" [class.wide]="!img">
           <h1>{{tab}}</h1>
           <div class="content">
@@ -26,7 +26,9 @@ interface Portfolio {
                 class="portfolio-item"
                 [class.clickable]="site.url"
                 (click)="onGoToSite(site.url)">
-                <img src="/assets/img/portfolio/{{site.alias}}.jpg" class="pull-left">
+                <img 
+                  src="/assets/img/portfolio/{{site.alias}}.jpg"
+                  class="pull-left">
                 <div class="pdata">
                   <div class="title">{{site.name}}</div>
                   <div class="description">{{site.description}}</div>

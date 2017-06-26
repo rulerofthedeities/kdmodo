@@ -6,6 +6,7 @@
   border-radius: 6px;
   color: white;
   font-size: 26px;
+  animation: slide 0.8s ease-out forwards;
 }
 img {
   border-right: 1px solid grey;
@@ -86,4 +87,39 @@ h1 {
 :host-context(.trees) .panel{
   background-color: rgba(0, 0, 0, 0.8);
 }
+
+
+/* animation */
+
+@keyframes slide {
+  0% {
+    opacity: 0.2;
+    transform: translateX(-110%) scale(1);
+  }
+  20% {
+    transform: translateX(-100%) scale(1);
+  }
+  50% {
+    transform: translateX(0) scale(1);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* mobile */
+
+@media screen and (max-width:991px) {
+  .panel {
+    min-height: 268px;
+  }
+  .txt {
+    margin-left: 216px;
+  }
+  .page-img {height: 264px;}
+  p {
+    font-size: 20px;
+  }
+}
+
 

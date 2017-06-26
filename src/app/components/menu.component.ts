@@ -30,7 +30,7 @@ export class MenuComponent {
 
   isActive(path: string): boolean {
     const routerPath = this.router.url;
-    if (this.mobileMenu || routerPath.substring(0, path.length) === path) {
+    if (this.mobileMenu || routerPath === path) {
       return true;
     } else {
       return false;
