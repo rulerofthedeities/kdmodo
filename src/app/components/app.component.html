@@ -1,15 +1,19 @@
-<video playsinline autoplay muted loop [src]="video">
+<div class="img" *ngIf="!video" [ngStyle]="{'background':image}">
+</div>
+<video playsinline autoplay muted loop 
+  [src]="video" *ngIf="video">
 </video>
 
-<div class="container {{theme}}">
-  
+<div class="container {{theme}}" (window:resize)="onResize($event)">
   <kd-menu></kd-menu>
   <router-outlet></router-outlet>
   <kd-footer></kd-footer>
-  <span *ngFor="let atheme of themes"
-    class="theme"
-    (click)="onChangeTheme(atheme)"
-    [class.selected]="theme===atheme.toLowerCase()">
-    {{atheme}}
-  </span>
+  <div *ngIf="video">
+    <span *ngFor="let atheme of themes; let i=index"
+      class="theme"
+      (click)="onChangeTheme(atheme)"
+      [class.selected]="theme===atheme.toLowerCase()">
+      {{atheme}} {{i>=themes.length - 1 ? '' : '-'}} 
+    </span>
+  </div>
 </div>

@@ -9,10 +9,12 @@ import {theme} from '../app.config';
 export class AppComponent implements OnInit {
   themes: string[];
   theme: string;
-  video: string;
+  video: string = null;
+  image: string = null;
+  speed = 0.6;
 
   ngOnInit() {
-    this.themes = ['Moon', 'Pool', 'Trees'];
+    this.themes = ['Moon', 'Pool', 'Trees', 'Heartbeat', 'Globe'];
     this.changeTheme(theme);
   }
 
@@ -20,8 +22,19 @@ export class AppComponent implements OnInit {
     this.changeTheme(newTheme);
   }
 
+  onResize(event) {
+    this.changeTheme(this.theme);
+  }
+
   private changeTheme(newTheme: string) {
     this.theme = newTheme.toLowerCase();
-    this.video = '/assets/video/background-' + this.theme + '.mp4';
+
+    if (window.innerWidth > 991) {
+      this.video = '/assets/video/background-' + this.theme + '.mp4';
+    } else {
+      this.theme = 'moon';
+      this.image = 'url(/assets/img/background/' + this.theme + '-991.jpg)';
+      this.video = null;
+    }
   }
 }

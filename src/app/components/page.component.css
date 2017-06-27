@@ -109,7 +109,8 @@ h1 {
 
 /* mobile */
 
-@media screen and (max-width:991px) {
+/* 480, 768, 992, 1200 */
+@media screen and (max-width: 991px) {
   .panel {
     min-height: 268px;
   }
